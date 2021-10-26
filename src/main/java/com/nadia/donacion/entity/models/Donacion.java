@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import com.sun.istack.NotNull;
 
 @Entity
-@Table(name = "animal")
+@Table(name = "donacion")
 
 public class Donacion implements Serializable{
 
@@ -22,11 +22,7 @@ public class Donacion implements Serializable{
 	private long id;
 	
 	@NotNull
-	private String nombre;
-	@NotNull
 	private String tipo;
-	@NotNull
-	private String donacion;
 	
 	public long getId() {
 		return id;
@@ -34,23 +30,17 @@ public class Donacion implements Serializable{
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getNombre() {
-		return nombre;
+	public String getTipo() {
+		return tipo;
 	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
-	public String getDonacion() {
-		return donacion;
-	}
-	public void setDonacion(String donacion) {
-		this.donacion = donacion;
-	}
-	public Donacion(long id, String nombre, String tipo, String donacion) {
+	
+	public Donacion(long id, String nombre, String tipo) {
 		super();
 		this.id = id;
-		this.nombre = nombre;
-		this.donacion = donacion;
+		this.tipo = tipo;
 	}
 	public Donacion() {
 	}

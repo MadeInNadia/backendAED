@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import com.sun.istack.NotNull;
 
 @Entity
-@Table(name = "animal")
+@Table(name = "colaboradores")
 
 public class Colaboradores implements Serializable{
 
